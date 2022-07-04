@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script> -->
 </head>
 
 <body>
@@ -234,7 +236,8 @@
     <section id="contact">
         <h1 style="color: white;" class="h-primary center">Contact Me</h1>
         <div id="contact-box">
-            <form action = "" >
+            <!-- <form action = "javascript:sendEmail()", mode ="post" > -->
+            <form action = "", >
             
                 <div class="form-group">
                     <label for="name">Name: </label>
@@ -252,7 +255,7 @@
                     <label for="message">Message: </label>
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Message on any of above mentioned social handles to connect with me for anything or for Resume."></textarea>                </div>
                 <div class="form-group">
-                    <button type="submit">Send on social handles</button>
+                    <button type="submit">Send Message</button>
                 </div>
             </form>
         </div>
@@ -267,7 +270,34 @@
 
 </body>
 
+<!-- <script>  
+    function sendEmail() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let message = document.getElementById("message").value;
+        let finalmessage = `Name : ${name} <br>  Email : ${email} <br> Phone : ${phone} <br> Message : ${message} <br>`;
+        Email.send({
+            SecureToken: "30096532-ba50-45c0-98ef-fba14064341e",
+            // Host : "smtp.elasticemail.com",
+            // Username : "alicemsmith188@gmail.com",
+            // Password : "D3D7B41AF815F9C37A555AA067BAA2D19401",
+            To : 'aadarshrajsah@gmail.com',
+            From : email,
+            Subject : "Mail from ArS website",
+            Body : finalmessage
+        }).then(
+          message => {
+            if(message=='OK') alert("message sent successfully")
 
+            else {
+                console.error(message);
+                alert("ERROR")
+            }
+        }
+        );
+    }
+    </script> -->
 <script src="js/particle.js"></script>
 <script src="js/send.js"></script> -->
  <script src="js/demo-canvas.js"></script>
